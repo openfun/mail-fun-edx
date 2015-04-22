@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <style type="text/css">
+
+  	/* What it does: Remove spaces around the email design added by some email clients. */
+  	/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Forces Outlook.com to display emails full width. */
+		.ExternalClass {
+			width: 100%;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+    /* What it does: Fixes webkit padding issue. */
+    table {
+			border-spacing:0 !important;
+    }
+
+		/* What it does: Fixes Outlook.com line height. */
+		.ExternalClass,
+		.ExternalClass * {
+    	line-height: 100%;
+		}
+
+		/* What it does: Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+		table {
+		  border-collapse: collapse;
+		  margin: 0 auto;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode:bicubic;
+		}
+
+    /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+    .yshortcuts a {
+			border-bottom: none !important;
+    }
+
+    /* What it does: Overrides blue, underlined links auto-detected by iOS Mail. */
+    /* More Info: https://litmus.com/blog/update-banning-blue-links-on-ios-devices */
+    .mobile-link--footer a {
+	    color: #666666 !important;
+    }
+
+		/* What it does: Overrides styles added images. */
+		img {
+			border:0 !important;
+			outline:none !important;
+			text-decoration:none !important;
+		}
+
+		/* What it does: Apple Mail doesn't support max-width, so a media query constrains the email container width. */
+		@media only screen and (min-width: 601px) {
+			.email-container {
+				width: 600px !important;
+			}
+		}
+
+		/* What it does: Apple Mail doesn't support max-width, so a media query constrains the email container width. */
+		@media only screen and (max-width: 600px) {
+			.email-container {
+				width: 100% !important;
+				max-width: none !important;
+			}
+		}
+
+  </style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#fff" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;">
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#fff" style="border-collapse:collapse;"><tr><td>
+
+	<!-- Visually Hidden Preheader Text : BEGIN -->
+	<div style="display:none; visibility:hidden; opacity:0; color:transparent; height:0; width:0; line-height:0; overflow:hidden; mso-hide: all;">
+		(Optional) This text will appear in the inbox preview, but not the email body.
+	</div>
+	<!-- Visually Hidden Preheader Text : END -->
+
+  <!-- Outlook and Lotus Notes don't support max-width but are always on desktop, so we can enforce a wide, fixed width view. -->
+  <!-- Beginning of Outlook-specific wrapper : BEGIN -->
+	<!--[if (gte mso 9)|(IE)]>
+  <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td>
+  <![endif]-->
+  <!-- Beginning of Outlook-specific wrapper : END -->
+
+  <!-- Email wrapper : BEGIN -->
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width:600px; margin:auto;" class="email-container">
+    <tr>
+    	<td>
+
+        <!-- Logo + Links : BEGIN -->
+        <table border="0" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="middle" style="padding:10px 0; text-align:left;" width="150">
+              <a href="https://www.france-universite-numerique-mooc.fr"><img src="images/logo-fun.png" alt="alt text" width="80" height="80" border="0" align="left"></a>
+            </td>
+            <td valign="middle" style="padding:10px 0; text-align:right; line-height:1.1; font-family: sans-serif; font-size: 13px; color: #1f87c7;">
+              <h1 style="font-size: 22px">France Université Numérique</h1>
+              <h2 style="font-size: 16px">Découvrir, apprendre et réussir</h2>
+            </td>
+          </tr>
+        </table>
+        <!-- Logo + Links : END -->
+
+        <!-- Main Email Body : BEGIN -->
+        <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border: 1px solid #ddd">
+
+          <!-- Single Fluid Image, No Crop : BEGIN -->
+          <tr>
+            <td valign="middle" align="center" style="padding-top:4%;">
+              <img src="https://www.france-universite-numerique-mooc.fr/c4x/FUN/00101/asset/bandeauFUN.jpg?width=400" alt="" align="center" border="0" style="margin: auto;">
+            </td>
+          </tr>
+          <!-- Single Fluid Image, No Crop : END -->
+
+          <tr>
+            <td style="padding: 4%; font-family: sans-serif; font-size: 18px; line-height: 1.3; color: #666666;">
+              <center><h1 style="font-size: 22px; color: #555;">Introduction à la cartographie des processus métiers</h1></center>
+              Bonjour à tous,
+              <br><br>
+              Le publipostage d'envoi des projets vient d'être effectué. Nous croisons les doigts pour que tout se passe bien !
+              <br><br>
+              230 dépots individuels pour 139 projets différents !
+              <br><br>
+              Toutes les instructions pour l'évaluation se trouvent dans le mail que vous devriez recevoir sous peu.
+              <br><br>
+              En cas de soucis, utilisez le salon dédié à l'évaluation sur le forum. Nous essayerons d'être réactifs au maximum.
+              <br><br>
+              Bonne évaluation
+              <br><br>
+              L'équipe pédagogique
+
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+	                <td width="4%" style="font-size: 0;line-height: 0;">&nbsp;</td>
+                  <td valign="top" width="44%" style="padding: 4% 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #666666; text-align: center;">
+
+                    <center>
+                    <a href="https://www.france-universite-numerique-mooc.fr/dashboard" style="background: #1f87c7; border: 15px solid #1f87c7; color: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px;">
+                      <b>Voir le cours</b>
+                    </a>
+
+                    <br><br>
+
+                    <a href="https://twitter.com/universite_num"><img src="images/twitter.png"></a>&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.facebook.com/france.universite.numerique"><img src="images/facebook.png"></a>
+
+                    </center>
+                    <br>
+
+
+                  </td>
+	                <td width="4%" style="font-size: 0;line-height: 0;">&nbsp;</td>
+                </tr>
+              </table>
+						</td>
+		      </tr>
+
+
+        </table>
+        <!-- Main Email Body : END -->
+
+      </td>
+		</tr>
+
+
+    <!-- Footer : BEGIN -->
+    <tr>
+      <td style="text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#666666;">
+        Vous recevez ce courrier car vous êtes inscrit sur la plateforme FUN <a href="https://www.france-universite-numerique-mooc.fr" style="color:#3b73af;text-decoration:none">france-universite-numerique-mooc.fr</a>.
+        Si vous ne souhaitez plus recevoir de messages en provenance de ce cours, il vous suffit de vous connecter à votre tableau de bord et de régler les « Paramètres de messagerie » du cours
+        <br><br>
+      </td>
+    </tr>
+    <!-- Footer : END -->
+
+  </table>
+  <!-- Email wrapper : END -->
+
+  <!-- End of Outlook-specific wrapper : BEGIN -->
+	<!--[if (gte mso 9)|(IE)]>
+      </td>
+    </tr>
+  </table>
+  <![endif]-->
+  <!-- End of Outlook-specific wrapper : END -->
+
+</td></tr></table>
+</body>
+</html>
