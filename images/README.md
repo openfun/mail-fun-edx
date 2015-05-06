@@ -1,0 +1,1 @@
+To be available as static files, those images are commited to fun-app repository in `fun-apps/fun/statics/fun/email`
